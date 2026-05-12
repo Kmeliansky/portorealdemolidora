@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porto Real Demolidora - Demolição Rápida e Segura em SP</title>
+    <meta name="description" content="Especialistas em demolição manual e mecanizada com mais de 20 anos de experiência em São Paulo e região. Orçamento sem compromisso." />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                lightest: '#F0FDFB',
+                light: '#5CECDB',
+                pure: '#0B9C95',
+                medium: '#105F5D',
+                dark: '#032F30',
+              },
+              gray: {
+                950: '#1F2E35',
+                900: '#101828',
+                800: '#182230',
+                700: '#344054',
+                600: '#475467',
+                500: '#667085',
+                400: '#98A2B3',
+                300: '#D0D5DD',
+                200: '#EAECF0',
+                100: '#F2F4F7',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['Archivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- GTM Placeholder (Head) -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXXXXX'); // Substitua pelo seu ID
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      .animate-fade-in-left { animation: fadeInLeft 0.6s ease-out forwards; }
+      .animate-scale-in { animation: scaleIn 0.8s ease-out forwards; }
+      @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+      @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+      
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      
+      @keyframes scroll-reverse {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+      }
+      
+      .animate-scroll {
+        animation: scroll 40s linear infinite;
+      }
+      
+      .animate-scroll-reverse {
+        animation: scroll-reverse 40s linear infinite;
+      }
+      
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gray-100 font-sans text-gray-950 antialiased">
+    <!-- GTM Placeholder (Body) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <!-- Header -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+      <div class="container mx-auto px-4 lg:px-8">
+        <nav class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <a href="#hero" class="text-primary-pure font-black text-2xl tracking-tighter flex items-center gap-2">
+              <img class="h-16 w-auto " src="logo-principal.webp" alt="">
+            </a>
+          </div>
+
+          <ul class="hidden md:flex items-center gap-8">
+            <li><a href="#hero" class="text-sm font-semibold text-gray-600 hover:text-primary-pure transition-colors">Início</a></li>
+            <li><a href="#services" class="text-sm font-semibold text-gray-600 hover:text-primary-pure transition-colors">Serviços</a></li>
+            <li><a href="#metrics" class="text-sm font-semibold text-gray-600 hover:text-primary-pure transition-colors">Diferenciais</a></li>
+            <li><a href="#about" class="text-sm font-semibold text-gray-600 hover:text-primary-pure transition-colors">Sobre</a></li>
+          </ul>
+
+          <div class="hidden md:flex items-center">
+            <button class="cta-button flex items-center gap-2 px-5 py-2.5 bg-primary-pure text-white text-sm font-bold rounded-xl hover:bg-primary-medium transition-all active:scale-95 cursor-pointer shadow-sm shadow-primary-pure/10">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              Falar com consultor
+            </button>
+          </div>
+
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-950 cursor-pointer">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 overflow-hidden">
+        <ul class="flex flex-col p-4 gap-4">
+          <li><a href="#hero" class="mobile-link text-lg font-bold text-gray-900 block">Início</a></li>
+          <li><a href="#services" class="mobile-link text-lg font-bold text-gray-900 block">Serviços</a></li>
+          <li><a href="#metrics" class="mobile-link text-lg font-bold text-gray-900 block">Diferenciais</a></li>
+          <li><a href="#about" class="mobile-link text-lg font-bold text-gray-900 block">Sobre</a></li>
+          <li class="pt-2">
+            <button class="cta-button w-full flex items-center justify-center gap-3 py-4 bg-primary-pure text-white font-bold rounded-2xl shadow-sm shadow-primary-pure/10 hover:bg-primary-medium transition-colors">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+              Solicitar Orçamento
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="relative min-h-screen flex items-center pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-gray-850">
+          <img src="src/banner-hero-background.webp" alt="Background" class="w-full h-full object-cover blur-[2px] scale-105 opacity-40">
+          <div class="absolute inset-0 bg-black/60"></div>
+          <div class="absolute inset-0 bg-gradient-to-tr from-black via-black/40 to-transparent"></div>
+          
+          <div class="absolute -right-24 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary-pure rounded-full blur-[120px] opacity-20"></div>
+          <div class="absolute right-0 top-1/2 -translate-y-1/2 w-48 h-48 bg-primary-pure rounded-full opacity-60 translate-x-32 hidden lg:block"></div>
+        </div>
+
+        <div class="container relative z-10 mx-auto px-4 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="flex flex-col space-y-8 animate-fade-in-left">
+              <div class="space-y-4">
+                <span class="inline-block px-3 py-1 bg-primary-pure/10 text-primary-light border border-primary-pure/20 text-[10px] font-black tracking-[0.2em] uppercase rounded-[2px]">ESPECIALISTA EM DEMOLIÇÃO EM SP</span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black font-display tracking-tighter text-white leading-[0.95] uppercase">DEMOLIÇÃO RÁPIDA E <span class="text-primary-light">SEGURA</span> EM SÃO PAULO</h1>
+                <div class="h-1.5 w-24 bg-primary-pure"></div>
+                <p class="text-xl text-gray-200 max-w-xl font-medium leading-tight">Residencial, comercial e industrial em SP, Campinas, Sorocaba e região. Equipe especializada e maquinário próprio.</p>
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-2">
+                <div class="flex items-center gap-2 text-sm font-medium text-gray-200"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary-pure"></i> Orçamento gratuito</div>
+                <div class="flex items-center gap-2 text-sm font-medium text-gray-200"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary-pure"></i> Resposta em 2h</div>
+                <div class="flex items-center gap-2 text-sm font-medium text-gray-200"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary-pure"></i> Sem compromisso</div>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <button class="cta-button group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-primary-pure border-2 border-primary-pure rounded-[4px] hover:bg-primary-medium hover:border-primary-medium active:scale-95 cursor-pointer shadow-lg shadow-primary-pure/20">
+                  <i data-lucide="phone" class="mr-3 w-5 h-5"></i>
+                  FALE CONOSCO AGORA
+                </button>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 mt-8">
+                <div class="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-[4px] shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 group cursor-default">
+                  <div class="p-2 bg-white/10 rounded-[4px] text-gray-300 group-hover:bg-primary-pure group-hover:text-white transition-colors">
+                    <i data-lucide="hammer" class="w-5 h-5"></i>
+                  </div>
+                  <span class="text-sm font-semibold text-white leading-tight pt-1">Demolição Manual</span>
+                </div>
+                <div class="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-[4px] shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 group cursor-default">
+                  <div class="p-2 bg-white/10 rounded-[4px] text-gray-300 group-hover:bg-primary-pure group-hover:text-white transition-colors">
+                    <i data-lucide="construction" class="w-5 h-5"></i>
+                  </div>
+                  <span class="text-sm font-semibold text-white leading-tight pt-1">Demolição Mecanizada</span>
+                </div>
+                <div class="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-[4px] shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 group cursor-default">
+                  <div class="p-2 bg-white/10 rounded-[4px] text-gray-300 group-hover:bg-primary-pure group-hover:text-white transition-colors">
+                    <i data-lucide="file-check" class="w-5 h-5"></i>
+                  </div>
+                  <span class="text-sm font-semibold text-white leading-tight pt-1">Demolição Industrial</span>
+                </div>
+                <div class="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-[4px] shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 group cursor-default">
+                  <div class="p-2 bg-white/10 rounded-[4px] text-gray-300 group-hover:bg-primary-pure group-hover:text-white transition-colors">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <span class="text-sm font-semibold text-white leading-tight pt-1">Retirada de entulho</span>
+                </div>
+              </div>
+            </div>
+            <div class="relative aspect-square rounded-[2rem] overflow-hidden shadow-2xl lg:block hidden animate-scale-in">
+              <img src="demolidora-em-sp.webp" alt="Industrial" class="object-cover w-full h-full hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-[2rem]"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metrics -->
+      <section id="metrics" class="py-12 border-y border-gray-100 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="flex-shrink-0">
+              <h2 class="text-2xl font-bold font-display text-gray-950 flex items-center gap-3">
+                <span class="w-10 h-1 bg-primary-pure rounded-full inline-block"></span>
+                Resultados Práticos
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 w-full lg:w-auto">
+              <div class="flex items-center gap-4 group transition-all">
+                <div class="w-12 h-12 flex items-center justify-center rounded-[4px] bg-primary-lightest group-hover:bg-primary-pure group-hover:text-white transition-colors">
+                  <i data-lucide="building-2" class="w-6 h-6 text-primary-pure group-hover:text-white"></i>
+                </div>
+                <div>
+                  <div class="text-xl font-bold font-display text-gray-950">500+</div>
+                  <div class="text-xs uppercase tracking-wider font-semibold text-gray-500">Obras realizadas</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 group transition-all">
+                <div class="w-12 h-12 flex items-center justify-center rounded-[4px] bg-primary-lightest group-hover:bg-primary-pure group-hover:text-white transition-colors">
+                  <i data-lucide="calendar" class="w-6 h-6 text-primary-pure group-hover:text-white"></i>
+                </div>
+                <div>
+                  <div class="text-xl font-bold font-display text-gray-950">22 Anos</div>
+                  <div class="text-xs uppercase tracking-wider font-semibold text-gray-500">De experiência</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 group transition-all">
+                <div class="w-12 h-12 flex items-center justify-center rounded-[4px] bg-primary-lightest group-hover:bg-primary-pure group-hover:text-white transition-colors">
+                  <i data-lucide="shield-check" class="w-6 h-6 text-primary-pure group-hover:text-white"></i>
+                </div>
+                <div>
+                  <div class="text-xl font-bold font-display text-gray-950">CREA-SP</div>
+                  <div class="text-xs uppercase tracking-wider font-semibold text-gray-500">Reg. nº 1958229</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 group transition-all">
+                <div class="w-12 h-12 flex items-center justify-center rounded-[4px] bg-primary-lightest group-hover:bg-primary-pure group-hover:text-white transition-colors">
+                  <i data-lucide="leaf" class="w-6 h-6 text-primary-pure group-hover:text-white"></i>
+                </div>
+                <div>
+                  <div class="text-xl font-bold font-display text-gray-950">Sustentável</div>
+                  <div class="text-xs uppercase tracking-wider font-semibold text-gray-500">Descarte ideal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: A Solução -->
+      <section id="solution" class="py-24 bg-white text-gray-950 overflow-hidden relative border-t border-gray-100">
+        <div class="absolute inset-0 opacity-5 pointer-events-none">
+          <div class="absolute top-0 right-0 w-1/2 h-full bg-primary-pure blur-[150px]"></div>
+        </div>
+        <div class="container mx-auto px-4 lg:px-8 relative z-10 text-center">
+          <span class="text-primary-pure font-black text-xs uppercase tracking-[0.2em] mb-4 inline-block">NOSSO DIFERENCIAL</span>
+          <h2 class="text-4xl md:text-5xl font-display font-black mb-16 tracking-tighter uppercase">Porto Real transforma <span class="text-primary-pure">risco em tranquilidade</span></h2>
+          
+          <div class="grid md:grid-cols-3 gap-8 mb-20 text-left">
+            <div class="p-8 bg-gray-50 border border-gray-100 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all group">
+              <h4 class="text-primary-pure font-bold text-lg mb-3 tracking-tight group-hover:text-primary-medium">Cronograma Definido</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">Entregamos o cronograma por escrito antes de começar, para que você saiba o dia que começa e o dia que termina.</p>
+            </div>
+            <div class="p-8 bg-gray-50 border border-gray-100 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all group">
+              <h4 class="text-primary-pure font-bold text-lg mb-3 tracking-tight group-hover:text-primary-medium">Equipe Especializada</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">Equipe treinada com EPI e seguro de responsabilidade civil, garantindo foco total na segurança da obra.</p>
+            </div>
+            <div class="p-8 bg-gray-50 border border-gray-100 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all group">
+              <h4 class="text-primary-pure font-bold text-lg mb-3 tracking-tight group-hover:text-primary-medium">Preço Fechado</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">Analisamos o projeto e fechamos o valor final antes de começar. Sem surpresas ou taxas extras no caminho.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+             <div class="p-4 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all cursor-default group">
+               <i data-lucide="home" class="w-8 h-8 text-primary-pure mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+               <p class="text-sm font-bold text-gray-800">Demolição Residencial</p>
+             </div>
+             <div class="p-4 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all cursor-default group">
+               <i data-lucide="factory" class="w-8 h-8 text-primary-pure mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+               <p class="text-sm font-bold text-gray-800">Demolição Industrial</p>
+             </div>
+             <div class="p-4 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all cursor-default group">
+               <i data-lucide="warehouse" class="w-8 h-8 text-primary-pure mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+               <p class="text-sm font-bold text-gray-800">Demolição de Galpão</p>
+             </div>
+             <div class="p-4 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all cursor-default group">
+               <i data-lucide="building" class="w-8 h-8 text-primary-pure mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+               <p class="text-sm font-bold text-gray-800">Demolição de Prédios</p>
+             </div>
+             <div class="p-4 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all cursor-default group">
+               <i data-lucide="building" class="w-8 h-8 text-primary-pure mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+               <p class="text-sm font-bold text-gray-800">Demolição Manual</p>
+             </div>
+             <div class="p-4 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all cursor-default group">
+               <i data-lucide="building" class="w-8 h-8 text-primary-pure mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+               <p class="text-sm font-bold text-gray-800">Demolição Mecanizada</p>
+             </div>
+             <div class="p-4 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all cursor-default group">
+               <i data-lucide="building" class="w-8 h-8 text-primary-pure mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+               <p class="text-sm font-bold text-gray-800">Equipe qualificada</p>
+             </div>
+             <div class="p-4 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all cursor-default group">
+               <i data-lucide="building" class="w-8 h-8 text-primary-pure mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+               <p class="text-sm font-bold text-gray-800">Remoção de Entulho</p>
+             </div>
+          </div>
+          <button class="cta-button mt-12 inline-flex items-center gap-3 px-10 py-5 bg-primary-pure text-white font-black rounded-xl hover:shadow-2xl hover:shadow-primary-pure/40 transition-all active:scale-95">
+             <i data-lucide="phone-call" class="w-6 h-6"></i>
+             SOLICITAR ORÇAMENTO GRÁTIS
+          </button>
+        </div>
+      </section>
+
+     <!-- Section: Galeria de Obras (Bento Grid) -->
+      <section class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="mb-16 text-center max-w-2xl mx-auto">
+            <span class="text-primary-pure font-black text-xs uppercase tracking-[0.2em]">CASES DE SUCESSO</span>
+            <h2 class="text-4xl font-display font-black text-gray-900 mt-2 uppercase tracking-tighter leading-none">Nossas Obras <span class="text-primary-pure">em Ação</span></h2>
+            <p class="text-gray-600 mt-4 leading-relaxed">Confira fotos e vídeos reais dos nossos projetos de demolição e terraplanagem em todo o estado de SP.</p>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <!-- Item 1 (Featured - spans 2x2) -->
+            <div class="col-span-2 row-span-2 aspect-square lg:aspect-auto bg-gray-200 rounded-3xl overflow-hidden group relative shadow-sm border border-gray-100">
+              <img src="demolicao-de-predio.webp" alt="Demolição Industrial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div>
+                  <span class="text-primary-light text-[10px] font-black tracking-widest uppercase mb-2 block">Destaque</span>
+                  <p class="text-white font-black uppercase tracking-tight text-xl">Demolição Industrial de Grande Porte</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 (Square) -->
+            <div class="aspect-square bg-gray-200 rounded-3xl overflow-hidden group relative shadow-sm border border-gray-100">
+              <img src="demolicao-em-cotia.webp" alt="Terraplanagem" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <p class="text-white font-bold uppercase tracking-tight text-[10px] md:text-xs">Terraplanagem</p>
+              </div>
+            </div>
+            <!-- Item 3 (Square - Video representation) -->
+             <div class="aspect-square bg-gray-200 rounded-3xl overflow-hidden group relative shadow-sm border border-gray-100">
+              <img src="descarte-de-insumos-conciente.webp" alt="Resíduos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <p class="text-white font-bold uppercase tracking-tight text-[10px] md:text-xs">Gestão de Resíduos</p>
+              </div>
+            </div>
+            <!-- Item 4 (Square) -->
+            <div class="aspect-square bg-gray-200 rounded-3xl overflow-hidden group relative shadow-sm border border-gray-100">
+              <img src="descarte-de-insumos-conciente.webp" alt="Resíduos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <p class="text-white font-bold uppercase tracking-tight text-[10px] md:text-xs">Gestão de Resíduos</p>
+              </div>
+            </div>
+            <!-- Item 5 (Square) -->
+            <div class="aspect-square bg-gray-200 rounded-3xl overflow-hidden group relative shadow-sm border border-gray-100">
+              <video autoplay muted loop playsinline class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <source src="/src/videos/video-de-demolicao-mecanizada.mp4" type="video/mp4" />
+              </video>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <p class="text-white font-bold uppercase tracking-tight text-sm">Gestão de Resíduos e Descarte Licenciado</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-primary-pure font-bold tracking-widest uppercase text-sm">Nossos serviços</span>
+            <h2 class="text-4xl md:text-5xl font-black font-display text-gray-950 mt-4 mb-6 uppercase tracking-tighter">
+              Soluções completas em <span class="text-primary-pure">Engenharia de Demolição</span>
+            </h2>
+            <p class="text-lg text-gray-600">
+              Oferecemos serviços especializados com tecnologia de ponta e segurança absoluta para qualquer tipo de estrutura.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-8 border border-gray-100 rounded-2xl hover:border-primary-pure/20 hover:shadow-2xl hover:shadow-primary-pure/5 transition-all group bg-gray-50/50">
+              <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary-pure transition-colors">
+                <i data-lucide="hammer" class="w-7 h-7 text-primary-pure group-hover:text-white transition-colors"></i>
+              </div>
+              <h3 class="text-xl font-bold font-display text-gray-950 mb-4">Demolição Manual</h3>
+              <p class="text-gray-600 leading-relaxed">Ideal para reformas e locais com restrição de espaço ou ruído. Executada com cuidado extremo.</p>
+              <div class="mt-6 pt-6 border-t border-gray-100 flex items-center text-primary-pure font-bold text-sm cursor-pointer group/link">Saiba mais <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></div>
+            </div>
+            <div class="p-8 border border-gray-100 rounded-2xl hover:border-primary-pure/20 hover:shadow-2xl hover:shadow-primary-pure/5 transition-all group bg-gray-50/50">
+              <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary-pure transition-colors">
+                <i data-lucide="construction" class="w-7 h-7 text-primary-pure group-hover:text-white transition-colors"></i>
+              </div>
+              <h3 class="text-xl font-bold font-display text-gray-950 mb-4">Demolição Mecanizada</h3>
+              <p class="text-gray-600 leading-relaxed">Utilização de escavadeiras e marteletes hidráulicos para obras de grande porte.</p>
+              <div class="mt-6 pt-6 border-t border-gray-100 flex items-center text-primary-pure font-bold text-sm cursor-pointer group/link">Saiba mais <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></div>
+            </div>
+            <div class="p-8 border border-gray-100 rounded-2xl hover:border-primary-pure/20 hover:shadow-2xl hover:shadow-primary-pure/5 transition-all group bg-gray-50/50">
+              <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary-pure transition-colors">
+                <i data-lucide="truck" class="w-7 h-7 text-primary-pure group-hover:text-white transition-colors"></i>
+              </div>
+              <h3 class="text-xl font-bold font-display text-gray-950 mb-4">Terraplanagem</h3>
+              <p class="text-gray-600 leading-relaxed">Nivelamento de terrenos, escavação e movimentação de terra para preparar seu terreno.</p>
+              <div class="mt-6 pt-6 border-t border-gray-100 flex items-center text-primary-pure font-bold text-sm cursor-pointer group/link">Saiba mais <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></div>
+            </div>
+            <div class="p-8 border border-gray-100 rounded-2xl hover:border-primary-pure/20 hover:shadow-2xl hover:shadow-primary-pure/5 transition-all group bg-gray-50/50">
+              <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary-pure transition-colors">
+                <i data-lucide="hard-hat" class="w-7 h-7 text-primary-pure group-hover:text-white transition-colors"></i>
+              </div>
+              <h3 class="text-xl font-bold font-display text-gray-950 mb-4">Demolição Industrial</h3>
+              <p class="text-gray-600 leading-relaxed">Especialistas em remoção de galpões e complexos industriais com planejamento rigoroso.</p>
+              <div class="mt-6 pt-6 border-t border-gray-100 flex items-center text-primary-pure font-bold text-sm cursor-pointer group/link">Saiba mais <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></div>
+            </div>
+            <div class="p-8 border border-gray-100 rounded-2xl hover:border-primary-pure/20 hover:shadow-2xl hover:shadow-primary-pure/5 transition-all group bg-gray-50/50">
+              <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary-pure transition-colors">
+                <i data-lucide="file-text" class="w-7 h-7 text-primary-pure group-hover:text-white transition-colors"></i>
+              </div>
+              <h3 class="text-xl font-bold font-display text-gray-950 mb-4">Laudos e Projetos</h3>
+              <p class="text-gray-600 leading-relaxed">Acompanhamento técnico com emissão de ART e laudos de vizinhança.</p>
+              <div class="mt-6 pt-6 border-t border-gray-100 flex items-center text-primary-pure font-bold text-sm cursor-pointer group/link">Saiba mais <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></div>
+            </div>
+            <div class="p-8 border border-gray-100 rounded-2xl hover:border-primary-pure/20 hover:shadow-2xl hover:shadow-primary-pure/5 transition-all group bg-gray-50/50">
+              <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary-pure transition-colors">
+                <i data-lucide="pickaxe" class="w-7 h-7 text-primary-pure group-hover:text-white transition-colors"></i>
+              </div>
+              <h3 class="text-xl font-bold font-display text-gray-950 mb-4">Retirada de Entulho</h3>
+              <p class="text-gray-600 leading-relaxed">Gestão completa dos resíduos com descarte certificado em aterros licenciados.</p>
+      </section>
+
+      <!-- Section: Depoimentos -->
+      <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="text-center mb-16">
+            <span class="text-primary-pure font-black text-xs uppercase tracking-[0.2em]">DEPOIMENTOS</span>
+            <h2 class="text-4xl font-display font-black text-gray-900 mt-2">O que nossos <span class="text-primary-pure">clientes dizem</span></h2>
+            <p class="text-gray-600 mt-4">Resultados reais de quem confiou na Porto Real Demolidora.</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 text-left">
+            <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+              <div>
+                <div class="flex gap-1 mb-4">
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                </div>
+                <p class="text-gray-700 italic mb-6">"Precisa derrubar um galpão de 800m² antes da nova construção. A Porto Real fez em 4 dias, dentro do prazo e sem nenhuma dor de cabeça."</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-primary-pure/10 flex items-center justify-center rounded-full text-primary-pure font-bold text-xs">CM</div>
+                <div>
+                  <h5 class="font-bold text-gray-900 text-sm">Carlos Mendes</h5>
+                  <p class="text-[10px] text-gray-500 uppercase font-black tracking-widest">Diretor — São Paulo</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+              <div>
+                <div class="flex gap-1 mb-4">
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                </div>
+                <p class="text-gray-700 italic mb-6">"Serviço limpíssimo, equipe educada e o preço ficou exatamente o que foi combinado. Recomendo muito!"</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-primary-pure/10 flex items-center justify-center rounded-full text-primary-pure font-bold text-xs">MF</div>
+                <div>
+                  <h5 class="font-bold text-gray-900 text-sm">Márcia Ferreira</h5>
+                  <p class="text-[10px] text-gray-500 uppercase font-black tracking-widest">Proprietária — Campinas</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+              <div>
+                <div class="flex gap-1 mb-4">
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+                </div>
+                <p class="text-gray-700 italic mb-6">"Profissionalismo acima da média, laudo técnico impecável e atendimento rápido. Nota 10."</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-primary-pure/10 flex items-center justify-center rounded-full text-primary-pure font-bold text-xs">RL</div>
+                <div>
+                  <h5 class="font-bold text-gray-900 text-sm">Roberto Lima</h5>
+                  <p class="text-[10px] text-gray-500 uppercase font-black tracking-widest">Incorporador — Sorocaba</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Orçamento / Checklist -->
+      <section id="quote" class="py-24 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="space-y-8 text-left">
+              <span class="text-primary-pure font-black text-xs uppercase tracking-[0.2em]">ORÇAMENTO GRÁTIS</span>
+              <h2 class="text-4xl md:text-5xl font-display font-black text-gray-900 tracking-tighter leading-[0.95] uppercase">Solicite agora e receba proposta <span class="text-primary-pure">em até 2h</span></h2>
+              <p class="text-gray-600 text-lg">Sem enrolação. Preencha o formulário e nossa equipe entra em contato com um orçamento detalhado — gratuito e sem compromisso.</p>
+              
+              <ul class="space-y-4 pt-4">
+                <li class="flex items-center gap-3 text-gray-900 font-bold uppercase tracking-tight text-xs">
+                  <div class="w-6 h-6 bg-primary-pure rounded-full flex items-center justify-center text-white"><i data-lucide="check" class="w-4 h-4"></i></div>
+                  Análise técnica gratuita do projeto
+                </li>
+                <li class="flex items-center gap-3 text-gray-900 font-bold uppercase tracking-tight text-xs">
+                  <div class="w-6 h-6 bg-primary-pure rounded-full flex items-center justify-center text-white"><i data-lucide="check" class="w-4 h-4"></i></div>
+                  Orçamento detalhado e fechado
+                </li>
+                <li class="flex items-center gap-3 text-gray-900 font-bold uppercase tracking-tight text-xs">
+                  <div class="w-6 h-6 bg-primary-pure rounded-full flex items-center justify-center text-white"><i data-lucide="check" class="w-4 h-4"></i></div>
+                  Prazo de execução definido em contrato
+                </li>
+                <li class="flex items-center gap-3 text-gray-900 font-bold uppercase tracking-tight text-xs">
+                  <div class="w-6 h-6 bg-primary-pure rounded-full flex items-center justify-center text-white"><i data-lucide="check" class="w-4 h-4"></i></div>
+                  Laudo técnico incluso no serviço
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-900 p-10 rounded-3xl text-left text-white shadow-2xl relative overflow-hidden">
+               <h3 class="text-2xl font-black mb-6 uppercase tracking-tighter">Solicite seu Orçamento</h3>
+               <form id="main-form" class="space-y-4">
+                 <input type="text" name="nome" placeholder="Seu nome completo" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-primary-pure outline-none transition-colors">
+                 <input type="email" name="email" placeholder="seu@email.com" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-primary-pure outline-none transition-colors">
+                 <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-primary-pure outline-none transition-colors">
+                 <button type="submit" class="w-full py-5 bg-primary-pure text-white font-black rounded-xl hover:bg-primary-medium transition-colors shadow-lg shadow-primary-pure/20 uppercase tracking-tighter">
+                   QUERO MEU ORÇAMENTO GRÁTIS
+                 </button>
+                 <p class="text-[10px] text-gray-500 text-center uppercase font-bold tracking-widest pt-4">
+                   Seus dados estão protegidos conforme a LGPD. Consulte nossa <a href="#" class="underline">Política de Privacidade</a>.
+                 </p>
+               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+              <span class="inline-block px-3 py-1 bg-primary-lightest text-primary-dark text-xs font-bold tracking-widest uppercase rounded-full mb-6">Sobre Nós</span>
+              <h2 class="text-3xl md:text-4xl font-bold font-display text-gray-950 mb-8 leading-tight">
+                Porto Real Demolidora: <br/>Tradicionalismo e Eficiência em <span class="text-primary-pure">São Paulo</span>
+              </h2>
+              <div class="space-y-6 text-gray-600 leading-relaxed">
+                <p>A Porto Real Demolidora atua há mais de 20 anos com serviços de demolição, terraplanagem e preparação de terrenos em todo o estado de São Paulo.</p>
+                <div class="p-6 bg-gray-200 border-l-4 border-primary-pure rounded-r-[4px] shadow-sm text-gray-700 italic">"Registrada no CREA-SP, a Porto Real conta com profissionais qualificados e atendimento próximo em todas as etapas da obra."</div>
+                <p>Ao longo de sua trajetória, a empresa consolidou sua atuação no setor por meio da responsabilidade técnica e compromisso total.</p>
+              </div>
+            </div>
+            <div class="relative group">
+              <div class="absolute -inset-4 bg-primary-lightest rounded-[2.5rem] rotate-2 transition-transform group-hover:rotate-1"></div>
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1000" alt="Equipe" class="relative rounded-[2rem] shadow-xl w-full object-cover h-[500px]">
+            </div>
+          </div>
+
+          <div class="mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+              <h3 class="text-2xl md:text-3xl font-bold font-display text-gray-950 mb-4">Diferenciais da Porto Real</h3>
+              <p class="text-gray-600">Por que somos referência em demolição e terraplanagem em São Paulo e região.</p>
+            </div>
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <div class="p-8 bg-white border border-gray-100 rounded-[4px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+                <div class="w-12 h-12 flex items-center justify-center rounded-[4px] bg-gray-100 text-gray-600 group-hover:bg-primary-pure group-hover:text-white transition-colors mb-6"><i data-lucide="history"></i></div>
+                <h4 class="text-lg font-bold font-display text-gray-950 mb-3">Experiência consolidada</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Mais de duas décadas de atuação no setor.</p>
+              </div>
+              <div class="p-8 bg-white border border-gray-100 rounded-[4px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+                <div class="w-12 h-12 flex items-center justify-center rounded-[4px] bg-gray-100 text-gray-600 group-hover:bg-primary-pure group-hover:text-white transition-colors mb-6"><i data-lucide="shield-check"></i></div>
+                <h4 class="text-lg font-bold font-display text-gray-950 mb-3">Segurança absoluta</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Planejamento e normas de segurança rigorosas.</p>
+              </div>
+              <div class="p-8 bg-white border border-gray-100 rounded-[4px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+                <div class="w-12 h-12 flex items-center justify-center rounded-[4px] bg-gray-100 text-gray-600 group-hover:bg-primary-pure group-hover:text-white transition-colors mb-6"><i data-lucide="search"></i></div>
+                <h4 class="text-lg font-bold font-display text-gray-950 mb-3">Atendimento técnico</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Avaliação técnica personalizada no local.</p>
+              </div>
+              <div class="p-8 bg-white border border-gray-100 rounded-[4px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+                <div class="w-12 h-12 flex items-center justify-center rounded-[4px] bg-gray-100 text-gray-600 group-hover:bg-primary-pure group-hover:text-white transition-colors mb-6"><i data-lucide="timer"></i></div>
+                <h4 class="text-lg font-bold font-display text-gray-950 mb-3">Prazos e Eficiência</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Execução rápida e atenção à limpeza da área.</p>
+              </div>
+              <div class="p-8 bg-white border border-gray-100 rounded-[4px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+                <div class="w-12 h-12 flex items-center justify-center rounded-[4px] bg-gray-100 text-gray-600 group-hover:bg-primary-pure group-hover:text-white transition-colors mb-6"><i data-lucide="leaf"></i></div>
+                <h4 class="text-lg font-bold font-display text-gray-950 mb-3">Prazos e Eficiência</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Execução rápida e atenção à limpeza da área.</p>
+            </div>
+        </div>
+      </section>
+
+       <!-- Section: Empresas Atendidas (Infinite Logo Carousel) -->
+      <section class="py-24 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 lg:px-8 mb-12 text-center">
+          <span class="text-primary-pure font-black text-xs uppercase tracking-[0.2em]">CONFIANÇA</span>
+          <h2 class="text-3xl font-display font-black text-gray-900 mt-2 uppercase tracking-tighter">Empresas que <span class="text-primary-pure">confiam no nosso trabalho</span></h2>
+        </div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative">
+          <!-- Gradient Masks -->
+          <div class="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div class="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+          <div class="space-y-6 overflow-hidden">
+            <!-- Row 1: Right to Left -->
+            <div class="flex whitespace-nowrap">
+              <div class="flex gap-4 min-w-full animate-scroll">
+                <!-- Set 1 -->
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-1.jpg" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-2.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-3.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-4.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-5.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+
+                <!-- Duplicated for Infinite Effect -->
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-1.jpg" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-2.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-3.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-4.jpg" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-5.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Left to Right -->
+            <div class="flex whitespace-nowrap">
+              <div class="flex gap-4 min-w-full animate-scroll-reverse">
+                <!-- Set 1 -->
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-6.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-7.png" alt="" class="max-w-[140px] max-h-[50px] object-contain" >
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-8.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-9.jpg" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                   <img src="src/logo/logo-9.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                
+               
+                <!-- Duplicated for Infinite Effect -->
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-6.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-7.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-8.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-9.jpg" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+                <div class="flex-shrink-0 w-48 h-24 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all cursor-default">
+                  <img src="src/logo/logo-9.png" alt="" class="max-w-[140px] max-h-[50px] object-contain">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: FAQ -->
+      <section class="py-24 bg-gray-100">
+        <div class="container mx-auto px-4 lg:px-8">
+           <div class="text-center mb-16">
+             <span class="text-primary-pure font-black text-xs uppercase tracking-[0.2em]">DÚVIDAS FREQUENTES</span>
+             <h2 class="text-4xl font-display font-black text-gray-900 mt-2 uppercase tracking-tighter">Perguntas que <span class="text-primary-pure">nossos clientes</span> fazem</h2>
+           </div>
+           
+           <div class="max-w-3xl mx-auto space-y-4">
+             <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+               <button class="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
+                 <span class="font-bold text-gray-900">Quais tipos de demolição a Porto Real realiza?</span>
+                 <i data-lucide="plus" class="faq-icon w-5 h-5 text-primary-pure transition-transform"></i>
+               </button>
+               <div class="faq-content hidden p-6 pt-0 text-gray-600 text-sm leading-relaxed border-t border-gray-50">
+                 Atendemos desde demolições manuais delicadas (reformas) até demolições mecanizadas de grande porte, industriais e remoção total de galpões e prédios em todo o estado de SP.
+               </div>
+             </div>
+             <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+               <button class="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
+                 <span class="font-bold text-gray-900">A equipe também cuida da remoção do entulho?</span>
+                 <i data-lucide="plus" class="faq-icon w-5 h-5 text-primary-pure transition-transform"></i>
+               </button>
+               <div class="faq-content hidden p-6 pt-0 text-gray-600 text-sm leading-relaxed border-t border-gray-50">
+                 Sim, realizamos a gestão completa. O entulho é descartado exclusivamente em aterros de resíduos da construção civil (RCC) licenciados, seguindo todas as normas ambientais.
+               </div>
+             </div>
+             <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+               <button class="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors">
+                 <span class="font-bold text-gray-900">Vocês atendem somente a capital paulista?</span>
+                 <i data-lucide="plus" class="faq-icon w-5 h-5 text-primary-pure transition-transform"></i>
+               </button>
+               <div class="faq-content hidden p-6 pt-0 text-gray-600 text-sm leading-relaxed border-t border-gray-50">
+                 Não, nosso atendimento se estende por todo o estado de São Paulo, incluindo litoral e interior (Campinas, Sorocaba, Jundiaí, etc).
+               </div>
+             </div>
+           </div>
+           
+           <div class="text-center mt-12">
+             <a href="#" class="inline-flex items-center gap-2 text-primary-pure font-black uppercase tracking-tighter text-xs hover:underline">
+               AINDA TEM DÚVIDAS? FALE CONOSCO <i data-lucide="arrow-right" class="w-4 h-4"></i>
+             </a>
+           </div>
+        </div>
+      </section>
+
+      <!-- Section: Final CTA -->
+      <section class="py-24 bg-primary-pure text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 lg:px-8 text-center max-w-4xl relative z-10">
+          <h2 class="text-4xl md:text-6xl font-display font-black mb-8 leading-none tracking-tighter uppercase">Pronto para demolir com segurança e no prazo?</h2>
+          <p class="text-xl text-primary-lightest/90 mb-12 font-medium">Solicite seu orçamento gratuito hoje mesmo.</p>
+          <button class="cta-button px-12 py-6 bg-white text-primary-pure font-black rounded-xl shadow-2xl hover:bg-gray-100 transition-all uppercase tracking-tighter flex items-center justify-center gap-3 mx-auto active:scale-95">
+             <i data-lucide="phone" class="w-6 h-6"></i>
+             QUERO MEU ORÇAMENTO GRÁTIS
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal Form -->
+    <div id="cta-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="modal-overlay"></div>
+      <div class="relative bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl animate-scale-in">
+        <button id="close-modal" class="absolute top-4 right-4 p-2 bg-gray-100 text-gray-500 rounded-full hover:bg-gray-200 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        
+        <div class="p-8 md:p-10">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-pure/10 text-primary-pure font-bold text-xs rounded-full mb-6">
+            <i data-lucide="zap" class="w-4 h-4 fill-current"></i>
+            Resposta em até 2 horas
+          </div>
+          
+          <h3 class="text-3xl font-black text-gray-950 tracking-tighter mb-4">Solicite seu Orçamento Grátis</h3>
+          <p class="text-gray-600 mb-8 font-medium">Preencha abaixo e nossa equipe entra em contato pelo WhatsApp com uma proposta detalhada.</p>
+          
+          <form id="modal-form" class="space-y-6">
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-gray-900 block">Nome completo *</label>
+              <input type="text" name="nome" placeholder="Seu nome completo" required class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:border-primary-pure outline-none transition-colors">
+            </div>
+            
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-gray-900 block">E-mail *</label>
+              <input type="email" name="email" placeholder="seu@email.com" required class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:border-primary-pure outline-none transition-colors">
+            </div>
+            
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-gray-900 block">WhatsApp / Telefone *</label>
+              <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:border-primary-pure outline-none transition-colors">
+            </div>
+            
+            <button type="submit" class="w-full group flex items-center justify-center gap-3 py-5 bg-primary-pure text-white font-bold rounded-xl hover:bg-primary-medium transition-all shadow-lg shadow-primary-pure/20 uppercase tracking-tight">
+              <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              QUERO MEU ORÇAMENTO GRÁTIS
+            </button>
+            
+            <p class="text-[10px] text-gray-500 text-center uppercase font-bold tracking-widest pt-2">
+              Seus dados estão protegidos conforme a LGPD. Consulte nossa <a href="#" class="underline">Política de Privacidade</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed bottom-6 left-6 right-6 md:left-auto md:w-96 z-[60] bg-white border border-gray-100 rounded-2xl p-6 shadow-2xl hidden animate-fade-in-left">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 bg-primary-pure/10 flex items-center justify-center rounded-xl text-primary-pure flex-shrink-0">
+          <i data-lucide="cookie" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-950 mb-1">Nós usamos cookies</h4>
+          <p class="text-xs text-gray-600 leading-relaxed mb-4">Utilizamos cookies para melhorar sua experiência e analisar o tráfego do nosso site.</p>
+          <div class="flex gap-4">
+            <button id="accept-cookies" class="px-4 py-2 bg-gray-950 text-white text-xs font-bold rounded-lg hover:bg-gray-800 transition-colors">Aceitar todos</button>
+            <button id="close-cookie-banner" class="px-4 py-2 text-gray-500 text-xs font-bold hover:text-gray-950 transition-colors">Configurar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-white py-16">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-gray-800 pb-12">
+          <div class="space-y-6">
+            <div class="text-white font-black text-2xl tracking-tighter uppercase">Porto Real <span class="text-primary-light">Demolidora</span></div>
+            <p class="text-gray-400 text-sm leading-relaxed">Empresa especializada em demolição e terraplanagem com foco no segmento do residencial ao industrial com segurança, agilidade e laudo técnico.</p>
+            <p class="text-[10px] text-gray-500 uppercase tracking-widest">© 2026 Porto Real Demolidora. Todos os direitos reservados.</p>
+          </div>
+          <div>
+            <h4 class="text-xs font-black uppercase tracking-widest text-primary-light mb-6">Serviços</h4>
+            <ul class="grid grid-cols-1 gap-2 text-gray-400 text-[11px] font-bold uppercase transition-colors">
+              <li><a href="#" class="hover:text-white">Demolição Residencial</a></li>
+              <li><a href="#" class="hover:text-white">Demolição Industrial</a></li>
+              <li><a href="#" class="hover:text-white">Demolição Urbana</a></li>
+              <li><a href="#" class="hover:text-white">Demolição de Galpão</a></li>
+              <li><a href="#" class="hover:text-white">Demolição de Prédios</a></li>
+              <li><a href="#" class="hover:text-white">Demolição Manual</a></li>
+              <li><a href="#" class="hover:text-white">Demolição Mecanizada</a></li>
+              <li><a href="#" class="hover:text-white">Terraplanagem</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs font-black uppercase tracking-widest text-primary-light mb-6">Contato</h4>
+            <ul class="space-y-4 text-gray-400 text-sm">
+              <li class="flex items-start gap-3"><i data-lucide="phone" class="w-4 h-4 text-primary-pure"></i> <span>(11) 4616-1515</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="smartphone" class="w-4 h-4 text-primary-pure"></i> <span>(11) 99214-1218</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="mail" class="w-4 h-4 text-primary-pure"></i> <span class="break-all">demolidoraportoreal@hotmail.com</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-primary-pure"></i> <span>R. Salvador, 1006 - Parque Turiguara, Cotia - SP, 06703-360</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xs font-black uppercase tracking-widest text-primary-light mb-6">Políticas</h4>
+            <ul class="space-y-2 text-gray-400 text-[11px] font-bold uppercase">
+              <li><a href="#" class="hover:text-white">Política de Privacidade</a></li>
+              <li><a href="#" class="hover:text-white">Termos de Uso</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511992941268" target="_blank" class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+      <i data-lucide="message-circle" class="w-8 h-8 fill-current"></i>
+      <div class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse"></div>
+    </a>
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>
